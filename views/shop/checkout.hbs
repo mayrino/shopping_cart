@@ -1,0 +1,38 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h1>CHECKOUT</h1>
+        <H4>Your total:${{ total }}</H4>
+    </div>
+    <div class="panel-body" id="checkout-panel">
+        <form id="payment-form" action="/checkout" method="post">
+            <div class="group">
+                <label>
+                    <span>Name</span>
+                    <input name="name" class="field" placeholder="Jane Doe" id="name" required />
+                </label>
+                <label>
+                    <span>Address</span>
+                    <input name="address" class="field" placeholder="jiu bao garden" required />
+                </label>
+                <label>
+                    <span>Phone</span>
+                    <input class="field" placeholder="(123) 456-7890" type="tel" name="phone"  required />
+                </label>
+            </div>
+            <div class="group">
+                <label>
+                    <span>Card</span>
+                    <div id="card-element" class="field"></div>
+                </label>
+            </div>
+            <button type="submit">Pay ${{ total }}</button>
+            <div class="outcome">
+                <div class="alert alert-danger {{# if noErrors }} hidden {{/if}}">has errors:{{ errMsg }}</div>
+                <div class="error" role="alert"></div>
+                <div class="success">
+                    Success! Your Stripe token is <span class="token"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

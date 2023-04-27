@@ -1,0 +1,34 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+
+	],
+    "settings":
+    {
+            "tab_size":4
+    },
+    "build_systems":
+    [
+            {
+                  "name":"run tools",
+                  "shell":true,
+                  "encoding":"utf-8",
+                  "variants":
+                  [
+                    {
+                        "name":"running....",
+                        "cmd":["npm","start"]
+                    },
+                     {
+                        "name":"stoped....",
+                        "cmd":["npm","stop"]
+                    }
+
+                  ]
+            }
+
+    ]
+}
